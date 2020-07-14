@@ -6,7 +6,7 @@
 
 # Usage
 
-1. Add geolocator as a dependency in your pubspec.yaml file.
+1. Add marquee_text as a dependency in your pubspec.yaml file.
     ```yaml
     dependencies:
       marquee_text: ^1.0.0
