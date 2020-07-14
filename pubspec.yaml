@@ -1,6 +1,6 @@
 name: marquee_text
-description: A flutter widget that allows text to scroll automatically.
-version: 0.0.1
+description: Scroll automatically when the text exceeds the width of the container.
+version: 1.0.0
 author: zhcode
 homepage: https://github.com/zh28/flutter-marquee-text
 
