@@ -1,14 +1,30 @@
-# marquee_text
+[中文介绍](https://www.zhcode.fun/note/Flutter/marquee_text包介绍.html)
 
-A flutter widget that allows text to scroll automatically.
+# Screenshot
 
-## Getting Started
+![Demo](https://imgkr.cn-bj.ufileos.com/8fd2277e-f665-41a2-995c-f07def1af729.gif)
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+# Usage
+```dart
+Container(
+  width: 100,
+  color: Colors.green
+  child: MarqueeText(
+    text: 'Don not worry when you are not recognized',
+    style: TextStyle(
+      fontSize: 24,
+      color: Colors.white,
+    ),
+    speed: 30,
+  ),
+)
+```
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+# Properties
+
+|Property|Type|Required|Default|
+|:--:|:-:|:-:|:-:|
+text|String|true|/
+style|TextStyle|false|/
+speed|double|false|50
+alwaysScroll|bool|false|false
