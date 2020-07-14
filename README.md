@@ -5,20 +5,28 @@
 ![Screenshot](https://www.zhcode.fun/images/marquee_text.gif)
 
 # Usage
-```dart
-Container(
-  width: 100,
-  color: Colors.green
-  child: MarqueeText(
-    text: 'Don not worry when you are not recognized',
-    style: TextStyle(
-      fontSize: 24,
-      color: Colors.white,
-    ),
-    speed: 30,
-  ),
-)
-```
+
+1. Add geolocator as a dependency in your pubspec.yaml file.
+    ```yaml
+    dependencies:
+      marquee_text: ^1.0.0
+    ```
+
+2. Now in your flutter project, you can use:
+    ```dart
+    Container(
+      width: 100,
+      color: Colors.green
+      child: MarqueeText(
+        text: 'Don not worry when you are not recognized',
+        style: TextStyle(
+          fontSize: 24,
+          color: Colors.white,
+        ),
+        speed: 30,
+      ),
+    )
+    ```
 
 # Properties
 
