@@ -2,7 +2,7 @@
 
 # Screenshot
 
-![Demo](https://imgkr.cn-bj.ufileos.com/8fd2277e-f665-41a2-995c-f07def1af729.gif)
+![Screenshot](https://imgkr.cn-bj.ufileos.com/8fd2277e-f665-41a2-995c-f07def1af729.gif)
 
 # Usage
 ```dart
