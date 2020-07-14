@@ -1,4 +1,4 @@
-[中文介绍](https://www.zhcode.fun/note/Flutter/marquee_text包介绍.html)
+[[中文文档]](https://www.zhcode.fun/note/Flutter/marquee_text包介绍.html)
 
 # Screenshot
 
