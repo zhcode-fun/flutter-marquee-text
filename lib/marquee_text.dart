@@ -25,7 +25,8 @@ class MarqueeText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.transparent,  /// Remove color will cause parent widget's onTap to not work
+      /// Remove color will cause parent widget's onTap to not work
+      color: Colors.transparent,
       child: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) => ClipPath(
           child: _MarqueeContainer(
