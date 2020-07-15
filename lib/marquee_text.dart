@@ -24,14 +24,17 @@ class MarqueeText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (BuildContext context, BoxConstraints constraints) => ClipPath(
-        child: _MarqueeContainer(
-          text: text,
-          textStyle: style,
-          constraints: constraints,
-          speed: speed,
-          alwaysScroll: alwaysScroll,
+    return Container(
+      color: Colors.transparent,
+      child: LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraints) => ClipPath(
+          child: _MarqueeContainer(
+            text: text,
+            textStyle: style,
+            constraints: constraints,
+            speed: speed,
+            alwaysScroll: alwaysScroll,
+          ),
         ),
       ),
     );
@@ -45,14 +48,14 @@ class _MarqueeContainer extends StatefulWidget {
   final BoxConstraints constraints;
   final bool alwaysScroll;
 
-  _MarqueeContainer(
-      {Key key,
-      @required this.text,
-      this.textStyle,
-      @required this.constraints,
-      this.speed,
-      this.alwaysScroll})
-      : super(key: key);
+  _MarqueeContainer({
+    Key key,
+    @required this.text,
+    this.textStyle,
+    @required this.constraints,
+    this.speed,
+    this.alwaysScroll,
+  }) : super(key: key);
 
   @override
   _MarqueeContainerState createState() => _MarqueeContainerState();
