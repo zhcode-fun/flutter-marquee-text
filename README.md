@@ -9,7 +9,7 @@
 1. Add marquee_text as a dependency in your pubspec.yaml file.
     ```yaml
     dependencies:
-      marquee_text: ^1.0.2+1
+      marquee_text: ^1.0.2+2
     ```
 
 2. Now in your flutter project, you can use:
