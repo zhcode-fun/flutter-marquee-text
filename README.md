@@ -1,6 +1,6 @@
 [[中文文档](https://www.zhcode.fun/note/Flutter/marquee_text包介绍.html)]
 
-![Publish Packages](https://github.com/zh28/flutter-marquee-text/workflows/Publish%20Packages/badge.svg?branch=master&event=workflow_dispatch)  [![pub package](https://img.shields.io/pub/v/marquee_text.svg)](https://pub.dev/packages/marquee_text)
+![Publish Packages](https://github.com/zh28/flutter-marquee-text/workflows/Publish%20Packages/badge.svg?branch=master)  [![pub package](https://img.shields.io/pub/v/marquee_text.svg)](https://pub.dev/packages/marquee_text)
 
 # Screenshot
 
