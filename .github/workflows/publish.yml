@@ -22,4 +22,4 @@ jobs:
           credential: ${{ secrets.CREDENTIAL_JSON }}
           flutter_package: true
           skip_test: true
-          dry_run: ${{ github.event.inputs.isPublish == 'false' }}
+          dry_run: ${{ github.event.inputs.isPublish != 'true' }}
