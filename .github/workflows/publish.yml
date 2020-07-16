@@ -2,6 +2,11 @@ name: "Publish Packages"
 
 on:
   workflow_dispatch:
+    inputs:
+      isPublish:
+        description: '是否发布，不发布则只检查'
+        required: false
+        default: 'false'
 
 jobs:
   publish:
@@ -17,4 +22,4 @@ jobs:
           credential: ${{ secrets.CREDENTIAL_JSON }}
           flutter_package: true
           skip_test: true
-          dry_run: true
+          dry_run: ${{ github.event.inputs.isPublish }} == 'false'
