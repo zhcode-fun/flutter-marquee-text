@@ -1,4 +1,6 @@
-[[中文文档]](https://www.zhcode.fun/note/Flutter/marquee_text包介绍.html)
+[[中文文档](https://www.zhcode.fun/note/Flutter/marquee_text包介绍.html)]
+
+[![pub package](https://img.shields.io/pub/v/marquee_text.svg)](https://pub.dev/packages/marquee_text)
 
 # Screenshot
 
