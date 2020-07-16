@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marquee_text/marquee_direction.dart';
 import 'package:marquee_text/marquee_text.dart';
 
 void main() {
@@ -54,6 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: MarqueeText(
                   text: _textList[firstTextIndex],
                   speed: 90,
+                  textDirection: TextDirection.rtl,
+                  marqueeDirection: MarqueeDirection.ltr,
                 ),
               ),
 
@@ -70,6 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       fontSize: 24,
                       color: Colors.white,
                     ),
+                    marqueeDirection: MarqueeDirection.ltr,
                   ),
                 ),
               ),

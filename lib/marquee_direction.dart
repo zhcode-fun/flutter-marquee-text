@@ -1,0 +1,4 @@
+enum MarqueeDirection {
+  rtl,
+  ltr,
+}

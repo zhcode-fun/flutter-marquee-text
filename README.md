@@ -11,7 +11,7 @@
 1. Add marquee_text as a dependency in your pubspec.yaml file.
     ```yaml
     dependencies:
-      marquee_text: ^1.0.2+2
+      marquee_text: ^1.1.0
     ```
 
 2. Now in your flutter project, you can use:
@@ -38,3 +38,5 @@ text|String|true|/
 style|TextStyle|false|/
 speed|double|false|50
 alwaysScroll|bool|false|false
+textDirection|TextDirection|false|TextDirection.ltr
+marqueeDirection|MarqueeDirection|false|MarqueeDirection.rtl

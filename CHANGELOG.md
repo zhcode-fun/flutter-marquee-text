@@ -1,3 +1,6 @@
+## 1.1.0
+  - add property "textDirection"
+  - add property "marqueeDirection"
 ## 1.0.2+2
   - run "dartfmt"
 ## 1.0.2

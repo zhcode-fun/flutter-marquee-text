@@ -1,6 +1,6 @@
 name: marquee_text
 description: Scroll automatically when the text exceeds the width of the container.
-version: 1.0.2+2
+version: 1.1.0
 homepage: https://github.com/zh28/flutter-marquee-text
 
 environment:
