@@ -1,12 +1,14 @@
 library marquee_text;
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:marquee_text/marquee_direction.dart';
 
 class MarqueeText extends StatelessWidget {
   final String text;
-  final TextStyle style;
+  final TextStyle? style;
 
   /// default 50
   /// Must be greater than 0.
@@ -21,8 +23,8 @@ class MarqueeText extends StatelessWidget {
   final MarqueeDirection marqueeDirection;
 
   const MarqueeText({
-    Key key,
-    @required this.text,
+    Key? key,
+    required this.text,
     this.style,
     this.speed = 50,
     this.alwaysScroll = false,
@@ -54,7 +56,7 @@ class MarqueeText extends StatelessWidget {
 
 class _MarqueeContainer extends StatefulWidget {
   final String text;
-  final TextStyle textStyle;
+  final TextStyle? textStyle;
   final double speed;
   final BoxConstraints constraints;
   final bool alwaysScroll;
@@ -62,14 +64,14 @@ class _MarqueeContainer extends StatefulWidget {
   final MarqueeDirection marqueeDirection;
 
   _MarqueeContainer({
-    Key key,
-    @required this.text,
+    Key? key,
+    required this.text,
     this.textStyle,
-    @required this.constraints,
-    this.speed,
-    this.alwaysScroll,
-    this.textDirection,
-    this.marqueeDirection,
+    required this.constraints,
+    required this.speed,
+    required this.alwaysScroll,
+    required this.textDirection,
+    required this.marqueeDirection,
   }) : super(key: key);
 
   @override
@@ -78,8 +80,8 @@ class _MarqueeContainer extends StatefulWidget {
 
 class _MarqueeContainerState extends State<_MarqueeContainer>
     with SingleTickerProviderStateMixin {
-  Animation<double> _animation;
-  AnimationController _animationController;
+  late Animation<double> _animation;
+  late AnimationController _animationController;
   bool _showMarquee = false;
 
   @override
