@@ -11,7 +11,7 @@
 1. Add marquee_text as a dependency in your pubspec.yaml file.
     ```yaml
     dependencies:
-      marquee_text: ^1.1.0
+      marquee_text: ^2.0.0-nullsafety.0
     ```
 
 2. Now in your flutter project, you can use:
