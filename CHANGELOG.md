@@ -1,3 +1,5 @@
+## 2.0.0
+  - upgrade to nullsafety version
 ## 1.1.0
   - add property "textDirection"
   - add property "marqueeDirection"
