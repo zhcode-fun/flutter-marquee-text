@@ -3,10 +3,12 @@ import 'package:marquee_text/marquee_direction.dart';
 import 'package:marquee_text/marquee_text.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,20 +17,20 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
+  const MyHomePage({Key key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<String> _textList = [
+  final List<String> _textList = [
     'Short text.',
     'Long text Long text Long text Long text Long text'
   ];
@@ -40,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('MarqueeTextDemo'),
+        title: const Text('MarqueeTextDemo'),
         centerTitle: true,
       ),
       body: Column(
@@ -60,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
 
-              SizedBox(width: 12),
+              const SizedBox(width: 12),
 
               /// SecondText
               /// 包含在Expanded中
@@ -69,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.pink,
                   child: MarqueeText(
                     text: _textList[secondTextIndex],
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 24,
                       color: Colors.white,
                     ),
@@ -84,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Expanded(
                 child: MaterialButton(
                   color: Colors.green,
-                  child: Text(
+                  child: const Text(
                     'ChangeFirstText',
                     style: TextStyle(
                       color: Colors.white,
@@ -97,11 +99,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                 ),
               ),
-              SizedBox(width: 12),
+              const SizedBox(width: 12),
               Expanded(
                 child: MaterialButton(
                   color: Colors.pink,
-                  child: Text(
+                  child: const Text(
                     'ChangeSecondText',
                     style: TextStyle(
                       color: Colors.white,

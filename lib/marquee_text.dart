@@ -63,7 +63,7 @@ class _MarqueeContainer extends StatefulWidget {
   final TextDirection textDirection;
   final MarqueeDirection marqueeDirection;
 
-  _MarqueeContainer({
+  const _MarqueeContainer({
     Key? key,
     required this.text,
     this.textStyle,
