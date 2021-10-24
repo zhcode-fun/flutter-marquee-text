@@ -1,4 +1,8 @@
-name: cd-action-test-publish
+name: "发布新包"
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   publish-to-pub:
