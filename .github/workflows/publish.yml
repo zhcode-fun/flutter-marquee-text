@@ -1,25 +1,18 @@
-name: "Publish Packages"
-
+name: cd-action-test-publish
 on:
-  workflow_dispatch:
-    inputs:
-      isPublish:
-        description: '是否发布，不发布则只检查'
-        required: false
-        default: 'false'
+  release:
+    types: [published] 
 
 jobs:
-  publish:
-
+  publish-to-pub:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Publish
-        uses: sakebook/actions-flutter-pub-publisher@v1.3.1
+      - uses: zhcode-fun/flutter-marquee-text
+
+      - name: 🔧 Setup Dart SDK
+        uses: dart-lang/setup-dart@v2.12.3 # setups dart sdk on this machine
+      - name: 🚀Publish
+        uses: RatakondalaArun/pub.dev-cd@v1
         with:
-          credential: ${{ secrets.CREDENTIAL_JSON }}
-          flutter_package: true
-          skip_test: true
-          dry_run: ${{ github.event.inputs.isPublish != 'true' }}
+          creditionals: ${{secrets.PUB_CREDITIONALS}}
+          # package_path: packages/subpackage
