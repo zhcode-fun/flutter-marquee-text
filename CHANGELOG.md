@@ -1,3 +1,7 @@
+## 2.5.0
+  - add parameter - `textAlign`
+  - support vertical marquee
+  - replace `text` type from `String` to `InlineSpan`
 ## 2.0.0
   - upgrade to nullsafety version
 ## 1.1.0

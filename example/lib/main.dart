@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marquee_text/marquee_direction.dart';
 import 'package:marquee_text/marquee_text.dart';
+import 'package:marquee_text/vertical_marquee_text.dart';
 
 void main() {
   runApp(const MyApp());
@@ -55,7 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.green,
                 width: 160,
                 child: MarqueeText(
-                  text: _textList[firstTextIndex],
+                  text: TextSpan(
+                    text: _textList[firstTextIndex],
+                  ),
                   speed: 90,
                   textDirection: TextDirection.rtl,
                   marqueeDirection: MarqueeDirection.ltr,
@@ -70,7 +73,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Container(
                   color: Colors.pink,
                   child: MarqueeText(
-                    text: _textList[secondTextIndex],
+                    text: TextSpan(
+                      text: _textList[secondTextIndex],
+                    ),
                     style: const TextStyle(
                       fontSize: 24,
                       color: Colors.white,
@@ -117,6 +122,46 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ],
+          ),
+          Container(
+            color: Colors.green,
+            width: 160,
+            height: 100,
+            // height: 400,
+            child: const VerticalMarqueeText(
+              marqueeDirection: MarqueeDirection.btt,
+              textAlign: TextAlign.center,
+              // alwaysScroll: true,
+              text: TextSpan(
+                children: <InlineSpan>[
+                  TextSpan(
+                    text: '''Hello,Flutter!
+Hello,Flutter!
+Hello,Flutter!
+Hello,Flutter!
+Hello,Flutter!
+Hello,Flutter!
+Hello,Flutter!
+Hello,Flutter!
+''',
+                  ),
+                  TextSpan(
+                    text: '''Hello,Flutter!
+Hello,Flutter!
+Hello,Flutter!
+Hello,Flutter!
+Hello,Flutter!
+Hello,Flutter!
+Hello,Flutter!
+Hello,Flutter!''',
+                    style: TextStyle(
+                      color: Colors.red,
+                    ),
+                  ),
+                ],
+              ),
+              speed: 30,
+            ),
           ),
         ],
       ),

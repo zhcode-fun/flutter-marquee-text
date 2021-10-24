@@ -11,7 +11,7 @@
 1. Add marquee_text as a dependency in your pubspec.yaml file.
     ```yaml
     dependencies:
-      marquee_text: ^2.0.0
+      marquee_text: ^2.5.0
     ```
 
 2. Now in your flutter project, you can use:
@@ -19,13 +19,40 @@
     Container(
       width: 100,
       color: Colors.green
-      child: MarqueeText(
-        text: 'Don not worry when you are not recognized',
-        style: TextStyle(
-          fontSize: 24,
-          color: Colors.white,
-        ),
-        speed: 30,
+      child: Column(
+        children: [
+          /// horizontal marquee
+          MarqueeText(
+            text: TextSpan(
+              text: 'This is long long long text...',
+            ),
+            style: TextStyle(
+              fontSize: 24,
+              color: Colors.white,
+            ),
+            speed: 30,
+          ),
+
+          /// vertical marquee
+          VerticalMarqueeText(
+            text: TextSpan(
+              children: <InlineSpan>[
+                TextSpan(
+                  text: '''
+                  This is long long long text...
+                  This is long long long text...
+                  This is long long long text...
+                  ''',
+                ),
+              ],
+            ),
+            style: TextStyle(
+              fontSize: 24,
+              color: Colors.white,
+            ),
+            speed: 30,
+          ),
+        ],
       ),
     )
     ```
@@ -40,3 +67,4 @@ speed|double|false|50
 alwaysScroll|bool|false|false
 textDirection|TextDirection|false|TextDirection.ltr
 marqueeDirection|MarqueeDirection|false|MarqueeDirection.rtl
+textAlign|TextAlign|false|TextAlign.start

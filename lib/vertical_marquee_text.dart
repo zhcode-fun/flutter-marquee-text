@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:marquee_text/marquee_direction.dart';
 
-class MarqueeText extends StatelessWidget {
+class VerticalMarqueeText extends StatelessWidget {
   final InlineSpan text;
   final TextStyle? style;
 
@@ -19,12 +19,12 @@ class MarqueeText extends StatelessWidget {
 
   final TextDirection textDirection;
 
-  /// default rtl
+  /// default btt
   final MarqueeDirection marqueeDirection;
 
   final TextAlign? textAlign;
 
-  const MarqueeText({
+  const VerticalMarqueeText({
     Key? key,
     required this.text,
     this.style,
@@ -106,27 +106,25 @@ class _MarqueeContainerState extends State<_MarqueeContainer>
   Widget build(BuildContext context) {
     final renderParagraph = RenderParagraph(
       widget.text,
-      softWrap: false,
-      maxLines: 1,
+      softWrap: true,
       textDirection: widget.textDirection,
-      overflow: TextOverflow.visible,
       textAlign: widget.textAlign,
     );
     renderParagraph.layout(widget.constraints);
-    var textWidth = renderParagraph.textSize.width;
-    var constraintsWidth = renderParagraph.constraints.maxWidth;
-    _showMarquee = textWidth > constraintsWidth || widget.alwaysScroll;
-    var tweenList = [constraintsWidth, -textWidth];
+    var textHeight = renderParagraph.textSize.height;
+    var constraintsHeight = renderParagraph.constraints.maxHeight;
+    _showMarquee = textHeight > constraintsHeight || widget.alwaysScroll;
+    var tweenList = [constraintsHeight, -textHeight];
     if (_showMarquee) {
       if (widget.speed <= 0) {
         throw 'marquee_text speed value must be greater than 0';
       }
-      var duration = ((textWidth / (widget.speed * 1.72)) * 1000).floor();
+      var duration = ((textHeight / (widget.speed * 1.72)) * 1000).floor();
       _showMarquee = true;
       _animationController.duration = Duration(milliseconds: duration);
       _animation = Tween(
-        begin: tweenList[widget.marqueeDirection.index],
-        end: tweenList[1 - widget.marqueeDirection.index],
+        begin: tweenList[widget.marqueeDirection.index - 2],
+        end: tweenList[3 - widget.marqueeDirection.index],
       ).animate(_animationController)
         ..addStatusListener((status) {
           if (status == AnimationStatus.completed) {
@@ -149,8 +147,8 @@ class _MarqueeContainerState extends State<_MarqueeContainer>
             builder: (context, myWidget) => Container(
               width: double.infinity,
               transform: Matrix4.translationValues(
-                _animation.value,
                 0.0,
+                _animation.value,
                 0.0,
               ),
               child: myWidget,
