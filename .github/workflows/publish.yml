@@ -1,14 +1,11 @@
 name: cd-action-test-publish
-on:
-  release:
-    types: [published] 
 
 jobs:
   publish-to-pub:
     runs-on: ubuntu-latest
     steps:
-      - uses: zhcode-fun/flutter-marquee-text
-
+      - name: Checkout
+      - uses: actions/checkout@v1
       - name: 🔧 Setup Dart SDK
         uses: dart-lang/setup-dart@v2.12.3 # setups dart sdk on this machine
       - name: 🚀Publish
