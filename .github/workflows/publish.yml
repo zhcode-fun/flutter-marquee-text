@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      - uses: actions/checkout@v1
+        uses: actions/checkout@v1
       - name: 🔧 Setup Dart SDK
         uses: dart-lang/setup-dart@v2.12.3 # setups dart sdk on this machine
       - name: 🚀Publish
