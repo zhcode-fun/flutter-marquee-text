@@ -1,3 +1,5 @@
+## 2.5.0+1
+  - update README
 ## 2.5.0
   - add parameter - `textAlign`
   - support vertical marquee
