@@ -1,5 +1,3 @@
-library marquee_text;
-
 import 'dart:ui';
 
 import 'package:flutter/material.dart';

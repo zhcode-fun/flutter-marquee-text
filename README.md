@@ -1,17 +1,15 @@
-[[中文文档](https://www.zhcode.fun/note/Flutter/marquee_text包介绍.html)]
-
-![Publish Packages](https://github.com/zh28/flutter-marquee-text/workflows/Publish%20Packages/badge.svg?branch=master)  [![pub package](https://img.shields.io/pub/v/marquee_text.svg)](https://pub.dev/packages/marquee_text)
+[![pub package](https://img.shields.io/pub/v/marquee_text.svg)](https://pub.dev/packages/marquee_text)
 
 # Screenshot
 
-![Screenshot](https://www.zhcode.fun/images/marquee_text.gif)
+![Screenshot](https://github.com/zhcode-fun/zhcode-fun/raw/master/marquee_text.gif)
 
 # Usage
 
 1. Add marquee_text as a dependency in your pubspec.yaml file.
     ```yaml
     dependencies:
-      marquee_text: ^2.5.0
+      marquee_text: ^2.5.0+1
     ```
 
 2. Now in your flutter project, you can use:
