@@ -136,7 +136,7 @@ class _MarqueeContainerState extends State<_MarqueeContainer>
       widget.text,
       style: widget.textStyle,
       overflow: TextOverflow.visible,
-      softWrap: false,
+      softWrap: true,
       textDirection: widget.textDirection,
       textAlign: widget.textAlign,
     );
